@@ -18,8 +18,10 @@ app.get('/', (req,res)=>{
             const icon = weatherData.weather[0].icon;
             const iconUrL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
             res.write("<h1>The temperature of jaipur is :"+ temp + "</h1>");
+            res.write("<p>weather condition : " + description +"</p>");
+            res.write("<img src=" + iconUrL+ ">")
             res.send();
-            console.log(temp, icon);
+            // console.log(temp, icon);
         });
         // console.log(response);
     });
